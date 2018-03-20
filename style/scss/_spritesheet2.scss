@@ -1,0 +1,112 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$sprite-food0-name: 'sprite-food0';
+$sprite-food0-x: 0px;
+$sprite-food0-y: 0px;
+$sprite-food0-offset-x: 0px;
+$sprite-food0-offset-y: 0px;
+$sprite-food0-width: 500px;
+$sprite-food0-height: 332px;
+$sprite-food0-total-width: 1000px;
+$sprite-food0-total-height: 664px;
+$sprite-food0-image: '../../images/spritesheet2.png';
+$sprite-food0: (0px, 0px, 0px, 0px, 500px, 332px, 1000px, 664px, '../../images/spritesheet2.png', 'sprite-food0', );
+$sprite-food2-name: 'sprite-food2';
+$sprite-food2-x: 500px;
+$sprite-food2-y: 0px;
+$sprite-food2-offset-x: -500px;
+$sprite-food2-offset-y: 0px;
+$sprite-food2-width: 500px;
+$sprite-food2-height: 332px;
+$sprite-food2-total-width: 1000px;
+$sprite-food2-total-height: 664px;
+$sprite-food2-image: '../../images/spritesheet2.png';
+$sprite-food2: (500px, 0px, -500px, 0px, 500px, 332px, 1000px, 664px, '../../images/spritesheet2.png', 'sprite-food2', );
+$sprite-food3-name: 'sprite-food3';
+$sprite-food3-x: 0px;
+$sprite-food3-y: 332px;
+$sprite-food3-offset-x: 0px;
+$sprite-food3-offset-y: -332px;
+$sprite-food3-width: 500px;
+$sprite-food3-height: 332px;
+$sprite-food3-total-width: 1000px;
+$sprite-food3-total-height: 664px;
+$sprite-food3-image: '../../images/spritesheet2.png';
+$sprite-food3: (0px, 332px, 0px, -332px, 500px, 332px, 1000px, 664px, '../../images/spritesheet2.png', 'sprite-food3', );
+$spritesheet-width: 1000px;
+$spritesheet-height: 664px;
+$spritesheet-image: '../../images/spritesheet2.png';
+$spritesheet-sprites: ($sprite-food0, $sprite-food2, $sprite-food3, );
+$spritesheet: (1000px, 664px, '../../images/spritesheet2.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

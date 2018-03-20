@@ -1,0 +1,37 @@
+.test {
+  background: antiquewhite;
+  color: aqua; }
+
+a {
+  background: lightgreen;
+}
+
+.test {
+  color: red;
+  -webkit-transition: ease-in-out .4s;
+  transition: ease-in-out .4s;
+  border-radius: 50%;
+  background-image: -webkit-linear-gradient(top, #a0c7e5, #1E5799);
+  background-image: linear-gradient(to bottom, #a0c7e5, #1E5799);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  text-align: center;
+  display: block;
+}
+
+body {
+  background: orangered;
+  color: mediumseagreen;
+}
+
+/*# sourceMappingURL=main.css.map */
+
+.ka {
+    background: antiquewhite;
+    color: aqua;
+}
+a {
+  background: lightgreen;
+}
+
+/*# sourceMappingURL=test2.css.map */

@@ -1,0 +1,31 @@
+@charset"UTF-8";
+@import"test2";
+@import"spritesheet2";
+.test {
+    color: blue;
+    transition: ease-in-out .4s;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #a0c7e5, #1E5799);
+    transition: 0.4s;
+    text-align: center;
+}
+
+.food0 {
+    @include sprite($sprite-food0);
+}
+
+.food2 {
+    @include sprite($sprite-food2);
+}
+
+.a {
+    background: url(../../images/food0.jpg) no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+body {
+    background: pink;
+    color: mediumseagreen;
+}
