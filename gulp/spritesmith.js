@@ -7,9 +7,9 @@
     gulp.task("sprite", function() {
         var spriteData = gulp.src("./images/*")
             .pipe(spritesmith({
-                imgName: "spritesheet.png", // スプライトシート名
-                cssName: "_spritesheet.scss", // スプライトシート用のSassの変数
-                imgPath: "../../images/spritesheet.png", // CSSからスプライトシートまでのパス
+                imgName: "spritesheet_3.png", // スプライトシート名
+                cssName: "_spritesheet_3.scss", // スプライトシート用のSassの変数
+                imgPath: "../../images/spritesheet_3.png", // CSSからスプライトシートまでのパス
                 cssFormat: "scss", // Sass(SCSS)で変数を出力
                 cssVarMap: function(sprite) {
                     // sprite-(個別パーツ名)で変数を使うための設定

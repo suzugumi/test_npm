@@ -8,7 +8,7 @@
 
     gulp.task('concat_js', () => {
         let TARGET = './gulp/*.js';
-        let RESULT_NAME = 'script.js'
+        let RESULT_NAME = 'script2.js'
         let LOCATION = './dist';
         gulp.src([TARGET])
             .pipe(changed(LOCATION))
@@ -28,7 +28,7 @@
 
     gulp.task('concat_css', () => {
         let TARGET = './style/css/*.css';
-        let RESULT_NAME = 'script3.css'
+        let RESULT_NAME = 'script4.css'
         let LOCATION = './dist';
 
         gulp.src([TARGET])

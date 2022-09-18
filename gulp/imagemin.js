@@ -12,7 +12,7 @@
 
     gulp.task('img', () => {
 
-        let TARGET = './images/food0.jpg';
+        let TARGET = './images/food3.jpg';
         let LOCATION = './dist';
         gulp.src(TARGET)
             .pipe(image_imagemin(

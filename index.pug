@@ -1,0 +1,26 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    title アンケート
+    link(rel="stylesheet", href="css/test.css")
+    style.
+     #aaa{
+     color: #333;
+     background: red;
+      } 
+  body
+    h1 どちらが食べたいですか？
+    form(method="post" action=path)
+      span#aaa 名前:
+      input(type="text" name="name")
+      input(type="radio" name="favorite" value=firstItem)
+      span #{firstItem}
+      input(type="radio" name="favorite" value=secondItem)
+      span #{secondItem}
+      input(type="radio" name="favorite" value=sardItem)
+      span #{sardItem}
+      input(type="radio" name="favorite" value=forceItem)
+      span #{forceItem}
+      button(type="submit") 投稿
+      script(src='test.js')

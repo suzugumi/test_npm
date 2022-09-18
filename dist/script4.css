@@ -1,0 +1,53 @@
+.test {
+  background: antiquewhite;
+  color: aqua; }
+
+a {
+  background: lightgreen;
+}
+
+.test {
+  color: blue;
+  -webkit-transition: ease-in-out .4s;
+  transition: ease-in-out .4s;
+  border-radius: 50%;
+  background-image: -webkit-linear-gradient(top, #a0c7e5, #1E5799);
+  background-image: linear-gradient(to bottom, #a0c7e5, #1E5799);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  text-align: center;
+}
+
+.food0 {
+  background-image: url(../../images/spritesheet2.png);
+  background-position: 0px 0px;
+  width: 500px;
+  height: 332px;
+}
+
+.food2 {
+  background-image: url(../../images/spritesheet2.png);
+  background-position: -500px 0px;
+  width: 500px;
+  height: 332px;
+}
+
+.a {
+  background: url(../../images/food0.jpg) no-repeat;
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+
+body {
+  background: pink;
+  color: mediumseagreen;
+}
+
+/*# sourceMappingURL=main.css.map */
+
+a {
+  background: lightgreen;
+}
+
+/*# sourceMappingURL=test2.css.map */

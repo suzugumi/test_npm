@@ -1,1 +1,1 @@
-{"version":3,"sources":["test2.scss"],"names":[],"mappings":"AACA;EACI,uBAAsB;CACzB","file":"test2.css","sourcesContent":["// _つけてるからcssセイセイされない\r\na {\r\n    background: lightgreen;\r\n}"]}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"test2.css","sourcesContent":[]}
